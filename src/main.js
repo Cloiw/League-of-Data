@@ -17,24 +17,40 @@ goToAverageButton.addEventListener('click', ()=>{
     isChampionSelected = true;
     championInfoDiv.innerHTML += 
          
-      `<div align="center" style="margin-top: 7px;">
-        <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${infoImg}">
-         <p class="info-champ-name{">${infoName}</p>
-         <p class="all-info-champ">
-         <strong>Vida</strong><br>
-         ${infoHp} (+${infoHpLvl} por nivel) <br> 
-         <strong>Mana</strong> <br>
-         ${infoMp} (+${infoMpLvl} por nivel) <br>
-         <strong>Regeneración de vida</strong><br>
-          ${infoHpRegen} (+${infoHpRegenLvl} por nivel)<br>
-         <strong>Ataque</strong><br>
-         ${infoAttack} <br>
+      `<div class="div-text-compare-info">
+        <div class="image-and-name-compare-info">
+          <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${infoImg}">
+          <h4>${infoName}</h4>
+        </div>
+        <p class="all-info-champ-text">
+          <strong>Vida</strong><br>
+          ${infoHp} (+${infoHpLvl} por nivel)
+        </p>
+        <p class="all-info-champ-text">
+          <strong>Mana</strong> <br>
+          ${infoMp} (+${infoMpLvl} por nivel)
+        </p>
+        <p class="all-info-champ-text">
+          <strong>Regeneración de vida</strong><br>
+          ${infoHpRegen} (+${infoHpRegenLvl} por nivel)
+        </p>
+        <p class="all-info-champ-text">
+          <strong>Ataque</strong><br>
+          ${infoAttack}
+        </p>
+        <p class="all-info-champ-text">
          <strong>Rango de ataque</strong><br>
-         ${infoAttackRange}<br>
+         ${infoAttackRange}
+        </p>
+        <p class="all-info-champ-text">
          <strong>Velocidad de movimiento</strong><br>
-          ${infoMs} <br>
+          ${infoMs}
+        </p>
+        <p class="all-info-champ-text">
          <strong>Armadura</strong><br>
-         ${infoArmor} (+${infoArmorLvl} por nivel)<br>
+         ${infoArmor} (+${infoArmorLvl} por nivel)
+        </p>
+        <p class="all-info-champ-text">
          <strong>Resistencia mágica</strong><br>
          ${infoSpellBlock} (+${infoSpellBlockLvl} por nivel)<br>
          </p>
