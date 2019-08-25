@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>League of Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/icono.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Scada" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-col">
+    <img  src="img/logo.png" class="title-logo" alt="League of Data Home">
+    <div class="row-champions"> 
+        <div class="col-champions" id="colContainChamp">
+          <select class="select-class" id="userSelectedTag">
+            <option disabled selected value="Todos">FILTRAR</option>
+              <option value="Todos">Todos</option>
+              <option value="Fighter"> Fighter </option>
+              <option value="Tank"> Tank </option>
+              <option value="Mage"> Mage </option>
+              <option value="Assassin"> Assassin </option>
+              <option value="Support"> Support </option>
+              <option value="Marksman"> Marksman </option>
+          </select>
+          <select class="select-class" id="userSelectedOrder">
+            <option disabled selected value="0">ORDENAR</option>
+            <option value="nameA_Z"> Nombre: A a Z </option>
+            <option value="nameZ_A"> Nombre: Z a A </option>
+            <option value="difficultyEasiestFirst">Dificultad: Fáciles Primero</option>
+            <option value="difficultyHardestFirst">Dificultad: Difíciles Primero</option>
+          </select>
+          <div id="divContainChampionImg" class="champions-container-row"> <!--CHAMPIONS CARDS-->
+            <div id="championImg" class="champions-card-wrap"></div>
+          </div>
+        </div>
+ <!--FIN CHAMPIONS CARDS-->
+        <div class="col-champions-info">
+          <p class="info-bar">INFORMACIÓN</p> 
+          <div class="row-champios-info" id="championInfo">
+            <div class="col-compare-info" id ="championInfoA">
+            <p class="main-info-tex"><i>Selecciona un campeón para ver su información aquí</i></p></div>
+            <div class="col-compare-info" id="championInfoB"> </div>
+          </div>
+          <button id="clearInfoChamp" class="btn-clear">LIMPIAR</button>
+          <a style="text-decoration:none"  href="average.html"  role="button"><p class="btn-main" id="calculateButton">CALCULAR STATS DE UN EQUIPO</p></a>
+        </div>
+
+      </div>
+    </div> <!--FIN ROW-->
+           
+    </div><!--FIN COINTAINER-->
+       
+
+  
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./data/lol/lol.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,275 @@
+
+*{
+    font-family: 'Scada', sans-serif;
+}
+
+body{
+    background-image: url("img/Freljord.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+
+.container-col,.col-champions,.col-champions-info,.col-compare-info{
+    flex-direction: column
+}
+.row-champions,.row-champios-info,.champions-container-row{
+    display: flex;
+}
+.champions-card-wrap{
+    width: 100%;
+    flex-flow: row wrap;
+}
+.container-col{
+    margin:15px;
+}
+
+.title-logo{
+    width: 45%; 
+    margin-bottom: 40px;
+    margin-top: 15px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.p-champion-name{
+    font-size: 17px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.p-champion-difficulty{
+    font-size: 15px; 
+}
+.card-group{
+    background: rgba(0, 0, 0, 0.7);
+    border:  2px outset #AE8D16;
+}
+
+/* #divChampionImg{
+    overflow: hidden;
+} */
+    
+.scrollable {
+    height: 620px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+div::-webkit-scrollbar {
+    background-color: rgba(6, 42, 63, 0.7);
+}
+
+div::-webkit-scrollbar-thumb {
+    background: rgb(51, 184, 218);
+    border-radius:10px;
+}
+
+.all-info-champ{
+    font-size: 16px;
+}
+
+.info-champ-name{
+    text-align: center;
+    font-size: 30px;
+}  
+    
+.select-class, .bootstrap-select .btn{
+    background:  rgba(0, 0, 0, 0.8);
+    border: 4px solid;
+    border-radius: 2px;
+    font-size: 30px;
+    color: #AE8D16; 
+    margin-bottom: 3px;
+    cursor: pointer;
+    padding: 6px;
+}
+
+/* averageee */
+.selectClassAv{
+    background:  rgba(87, 83, 83, 0.924);
+    border: 4px solid;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.bootstrap-select .dropdown-menu{
+    background:    rgba(0, 0, 0, 0.9);
+    font-size: 30px;
+    color: #AE8D16; 
+}
+
+select:hover,select:focus, .bootstrap-select .btn:hover, .bootstrap-select .btn:focus,#clearInfoChamp:hover {
+    color: rgb(230, 191, 51);
+    background:rgba(0, 0, 0, 0.9);
+}
+
+.info-bar{
+    cursor: default;
+    background:  rgba(0, 0, 0, 0.8);
+    letter-spacing: 2px;
+    color: #AE8D16; 
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: -4px;
+}
+
+.col-compare-info{
+    background: rgba(6, 42, 63, 0.8);
+    color: white;
+    height: 510;
+}
+
+.row-champios-info{
+     border:  4px outset #AE8D16; 
+}
+
+.btn-main,.btn-back,.btn-calculate{
+    background:  rgba(6, 42, 63, 0.8);
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: rgba(95, 223, 255, 1);
+    text-align: center;
+    border: 3px outset transparent;
+    border-image: linear-gradient(to bottom, rgba(95, 223, 255, 1) 0%, rgb(59, 157, 182) 100%) 1
+}
+
+.btn-back{
+    padding: 10px;
+    font-size: 15px;
+}
+
+.btn-calculate{
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.btn-clear{
+    width: inherit;
+    height: 40px;
+    color: #AE8D16;
+    font-size: 22px;
+    letter-spacing: 15px;
+    border: 3px outset transparent;
+    border-image: linear-gradient(to bottom, rgb(163, 139, 0) 0%, rgb(82, 63, 0) 100%) 1;
+    background:rgba(0, 0, 0, 0.7);
+}
+.btn-main:hover{
+    background:rgba(0, 0, 0, 0.9);
+}
+
+.main-info-tex{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 402px;
+}
+
+#selectsAv,#selectsAvB{
+    text-align: center;
+    
+}
+
+.average{
+    width: inherit;
+    height: auto;
+    color: #AE8D16;
+    border: 3px outset transparent;
+    border-image: linear-gradient(to bottom, rgb(163, 139, 0) 0%, rgb(82, 63, 0) 100%) 1;
+    background:rgba(0, 0, 0, 0.7);
+    margin-bottom: 5px;
+
+}
+
+
+.textCalculated{
+    text-align: center;
+    font-size: 17px;
+    color:white;
+    
+}
+
+#championInfoB{
+    background: rgba(17, 76, 110, 0.7);
+}
+
+   
+.teamA, .teamB{
+    border: 2px outset transparent;
+    border-image: linear-gradient(to bottom, rgb(163, 139, 0) 0%, rgb(82, 63, 0) 100%) 1;
+    margin-bottom: 10px;
+}
+.teamB{
+    background:rgba(17, 76, 110, 0.7);
+ 
+}
+.teamA{
+    background:rgba(6, 42, 63, 0.8);
+  
+}
+.teamTitle{
+    color: white;
+}
+.piechartClass{
+    display: inline-block;
+    margin: 0px;
+    text-align: center;
+    
+    
+}
+@media screen and (max-width: 5000px){
+    .infoBar{
+        margin-top: 0px;
+    }}
+@media screen and (max-width: 1199px){
+    
+    
+    .infoBar{
+        margin-top: 70px;
+    }
+   .scrollable {
+        height: 650px;
+    }#championInfoA, #championInfoB{
+        height:530px; 
+}}
+
+@media screen and (max-width: 991px){
+
+.infoChampNameClass{
+    font-size:20px;
+}
+.infoBar{
+    margin-top: 65px;
+}
+.scrollable {
+    height: 845px;
+}#championInfoA, #championInfoB{
+    height:700px; 
+}}
+@media screen and (max-width: 767px){
+.scrollable {
+   height: 250px;
+  
+}
+.infoBar{
+    margin-top: 10px;
+}
+#championInfoA, #championInfoB{
+    height:500px; }
+    .selectClass, .bootstrap-select .btn{
+    font-size: 20px;
+ }
+ div::-webkit-scrollbar {
+    width: 30px;
+}
+};
+
+
+
+
+  
+
+
