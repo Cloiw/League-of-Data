@@ -1,5 +1,5 @@
 /* Manejo del DOM */
-
+const goToAverageButton = document.getElementById("goToAverage");
 const clearInfo = document.getElementById("clearInfoChamp");
 const championImgDiv = document.getElementById("championImg");
 const orderChange = document.getElementById("userSelectedOrder");
@@ -8,8 +8,9 @@ const championInfoDiv = document.getElementById("championInfoA");
 const championInfoDivB = document.getElementById("championInfoB");
 let isChampionSelected = false;
 
-
-
+goToAverageButton.addEventListener('click', ()=>{
+  window.location.href="average.html"
+})
 //funcion para mostrar informacion de cada champ
  const championInfo = (infoImg,infoName,infoHp,infoHpLvl,infoHpRegen,infoHpRegenLvl,infoMp,infoMpLvl,infoAttack,infoAttackRange,infoMs,infoArmor,infoArmorLvl,infoSpellBlock,infoSpellBlockLvl) =>{
 
@@ -148,7 +149,7 @@ clearInfo.addEventListener('click', () =>{ //BOTON LIMPIAR
     if(isChampionSelected){
     championInfoDiv.removeChild(championInfoDiv.childNodes[1])
     championInfoDivB.removeChild(championInfoDivB.childNodes[0])
-    championInfoDiv.innerHTML+=`<p class="main-info-text"><i>Selecciona un campeón para ver su información aquí</i></p>`}
+    championInfoDiv.innerHTML+=`<p class="main-info-tex"><i>Selecciona un campeón para ver su información aquí</i></p></div>`}
     isChampionSelected = false;
  })
   }
