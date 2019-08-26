@@ -73,16 +73,21 @@ body{
     font-size: 15px; 
 }
 .champion-card-group{
-    justify-content: space-between;
+    padding-top:4%;
     width: 100%;
-  
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
 }
 
 .champion-card{
+    margin:10px;
     border: 2px white solid;
     background-color:aqua;
-    width:24%;
-    display: inline-block;
+    width:110px;
+    height: 110px;
+   
 }
 
 /* izquierda */
