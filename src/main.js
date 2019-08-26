@@ -82,9 +82,9 @@ goToAverageButton.addEventListener('click', ()=>{
     championImgDiv.innerHTML += 
     
    `
-    <div class="card mt-3" style="background-color: #e2e2e2";>
+    <div class="champion-card";>
     <div style="cursor: pointer;" id="${element.id}" onclick=championInfo(${JSON.stringify(element.image.full)},${JSON.stringify(element.id)},${element.stats.hp},${element.stats.hpperlevel},${element.stats.hpregen},${element.stats.hpregenperlevel},${element.stats.mp},${element.stats.mpperlevel},${element.stats.attackdamage},${element.stats.attackrange},${element.stats.movespeed},${element.stats.armor},${element.stats.armorperlevel},${element.stats.spellblock},${element.stats.spellblockperlevel})>
-        <div class="champion-card-header">
+        <div class="champion-card-head">
         <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${element.image.full}">
         <div class="champion-card-content>
         <p class="p-champion-info-name">${element.name}<p></div>
@@ -102,8 +102,8 @@ selectChange.addEventListener('change', () =>{ //mostrar filtro
   let allResultFilter = window.filteringResult(selectedTag,dataLol);
   allResultFilter.forEach(element =>{
     championImgDiv.innerHTML += 
-    `<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-    <div class="card mt-3" style="background-color: #e2e2e2";>
+    `<div class="champion-card">
+    <div>
     <div style="cursor: pointer;" id="${element.id}" onclick=championInfo(${JSON.stringify(element.img)},${JSON.stringify(element.id)},${element.stats.hp},${element.stats.hpperlevel},${element.stats.hpregen},${element.stats.hpregenperlevel},${element.stats.mp},${element.stats.mpperlevel},${element.stats.attackdamage},${element.stats.attackrange},${element.stats.movespeed},${element.stats.armor},${element.stats.armorperlevel},${element.stats.spellblock},${element.stats.spellblockperlevel})
     )>
         <div class="card-header">

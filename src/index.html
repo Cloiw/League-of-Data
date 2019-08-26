@@ -14,25 +14,27 @@
     <img  src="img/logo.png" class="title-logo" alt="League of Data Home">
     <div class="row-champions"> 
         <div class="col-champions" id="colContainChamp">
-          <select class="select-class" id="userSelectedTag">
-            <option disabled selected value="Todos">FILTRAR</option>
-              <option value="Todos">Todos</option>
-              <option value="Fighter"> Fighter </option>
-              <option value="Tank"> Tank </option>
-              <option value="Mage"> Mage </option>
-              <option value="Assassin"> Assassin </option>
-              <option value="Support"> Support </option>
-              <option value="Marksman"> Marksman </option>
-          </select>
-          <select class="select-class" id="userSelectedOrder">
-            <option disabled selected value="0">ORDENAR</option>
-            <option value="nameA_Z"> Nombre: A a Z </option>
-            <option value="nameZ_A"> Nombre: Z a A </option>
-            <option value="difficultyEasiestFirst">Dificultad: Fáciles Primero</option>
-            <option value="difficultyHardestFirst">Dificultad: Difíciles Primero</option>
-          </select>
+          <div class="selects-container">
+            <select class="select-class" id="userSelectedTag">
+              <option disabled selected value="Todos">FILTRAR</option>
+                <option value="Todos">Todos</option>
+                <option value="Fighter"> Fighter </option>
+                <option value="Tank"> Tank </option>
+                <option value="Mage"> Mage </option>
+                <option value="Assassin"> Assassin </option>
+                <option value="Support"> Support </option>
+                <option value="Marksman"> Marksman </option>
+            </select>
+            <select class="select-class" id="userSelectedOrder">
+              <option disabled selected value="0">ORDENAR</option>
+              <option value="nameA_Z"> Nombre: A a Z </option>
+              <option value="nameZ_A"> Nombre: Z a A </option>
+              <option value="difficultyEasiestFirst">Dificultad: Fáciles Primero</option>
+              <option value="difficultyHardestFirst">Dificultad: Difíciles Primero</option>
+            </select>
+          </div>
           <div id="divContainChampionImg" class="champions-container-row"> <!--CHAMPIONS CARDS-->
-            <div id="championImg" class="champions-card-wrap"></div>
+            <div id="championImg" class="champion-card-group"></div>
           </div>
         </div>
  <!--FIN CHAMPIONS CARDS-->
