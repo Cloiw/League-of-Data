@@ -78,19 +78,19 @@ goToAverageButton.addEventListener('click', ()=>{
   championInfo;
   let selectedTag = document.getElementById("userSelectedTag").value;
   let allResultFilter = window.filteringResult(selectedTag,dataLol)
-    allResultFilter.forEach(element => {
+    allResultFilter.forEach(e => {
     championImgDiv.innerHTML += 
     
    `
     <div class="champion-card";>
-    <div style="cursor: pointer;" id="${element.id}" onclick=championInfo(${JSON.stringify(element.image.full)},${JSON.stringify(element.id)},${element.stats.hp},${element.stats.hpperlevel},${element.stats.hpregen},${element.stats.hpregenperlevel},${element.stats.mp},${element.stats.mpperlevel},${element.stats.attackdamage},${element.stats.attackrange},${element.stats.movespeed},${element.stats.armor},${element.stats.armorperlevel},${element.stats.spellblock},${element.stats.spellblockperlevel})>
-        <div class="champion-card-head">
-        <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${element.image.full}">
-        <div class="champion-card-content>
-        <p class="p-champion-info-name">${element.name}<p></div>
-        
-           </div>
-       </div> 
+      <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
+        <div class="card-content-img">
+          <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
+        </div>
+        <div class="card-content-p">
+          <p>${e.name}<p>
+        </div>
+      </div>  
     </div>
  `    
   });
