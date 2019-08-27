@@ -66,7 +66,12 @@ body{
 }
 
 .p-champion-difficulty {
-    font-size: 15px; 
+    font-size: 10px;
+}
+
+.p-champion-name-difficulty {
+    font-weight: 100;
+    font-size: 8px;
 }
 
 .champion-card-group {
@@ -86,7 +91,7 @@ body{
     height: 110px;
 }
 
-.champion-card-content{
+.champion-card-content {
     width: 100%;
     height: 100%;
     display: flex;
@@ -96,9 +101,6 @@ body{
 .card-content-img,.card-content-p{
     height: 35%;
     margin-top: 5%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
     text-align: center;
     font-weight: bolder;
 }
@@ -108,14 +110,20 @@ body{
     font-size: 14px;
 }
 
-.card-content-img{
+
+.card-content-img, .card-content-img-difficulty {
     height: 43%;
     margin-top: 17%;
 }
 
-.card-content-img > img {
+.card-content-img > img, .card-content-img-difficulty > img {
     width:40px;
     height: 40px;
+}
+
+.card-content-img-difficulty {
+    margin-top: 8%;
+    text-align: center;
 }
 
 
