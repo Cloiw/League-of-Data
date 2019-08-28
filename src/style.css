@@ -225,6 +225,16 @@ div::-webkit-scrollbar-thumb {
 }
 
 /* averageee */
+.error-msg {
+    color: rgb(218, 0, 0);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+#errorMsgA, #errorMsgB {
+    height: 60px;
+}
+
 .selectClassAv {
     background:  rgba(87, 83, 83, 0.924);
     border: 4px solid;
@@ -238,7 +248,7 @@ div::-webkit-scrollbar-thumb {
     color: #AE8D16; 
 }
 
-select:hover,select:focus, .bootstrap-select .btn:hover, .bootstrap-select .btn:focus,#clearInfoChamp:hover {
+.champion-card:hover, select:hover,select:focus, .bootstrap-select .btn:hover, .bootstrap-select .btn:focus,#clearInfoChamp:hover {
     color: rgb(230, 191, 51);
     background:rgba(0, 0, 0, 0.9);
 }
