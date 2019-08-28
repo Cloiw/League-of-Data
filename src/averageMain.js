@@ -21,11 +21,16 @@ const jungleSelectB = document.getElementById('jungleSecondTeam');
 const midSelectB = document.getElementById('midSecondTeam');
 const adcSelectB = document.getElementById('adcSecondTeam');
 const supportSelectB = document.getElementById('supportSecondTeam');
-const goToIndexButton = document.getElementById('btnBackAvg')
+const goToIndexButton = document.getElementById('btnBackAvg');
+const clearButton = document.getElementById('btnClearAvg');
 google.charts.load('current', {'packages':['corechart']});
 
 goToIndexButton.addEventListener('click', () => {
-  window.location.href="index.html"
+  window.location.href='index.html'
+})
+
+clearButton.addEventListener('click', () => {
+  location.reload();
 })
 
 //CREAR OPCIONES PARA SELECT
