@@ -225,6 +225,9 @@ div::-webkit-scrollbar-thumb {
 }
 
 /* averageee */
+.btn-calculate-avg {
+    margin: 2% 0 3% 0;
+}
 .error-msg {
     color: rgb(218, 0, 0);
     font-weight: bolder;
