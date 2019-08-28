@@ -1,40 +1,41 @@
 
-  const filteringResult = (selectedTag,allChampionData)=>{
+const filteringResult = (selectedTag, allChampionData) => {
   const allChampionValues = Object.values(allChampionData);
-  let filterChampTag = allChampionValues.filter( element =>{ 
-  if(selectedTag=="Todos"){ //true para todos
-    return element;
-  }else{
-    return element.tags.includes(selectedTag);} //true si incluye tag
+  let filterChampTag = allChampionValues.filter( element => { 
+    if (selectedTag === 'Todos'){
+      return element;
+    } else {
+      return element.tags.includes(selectedTag);
+    }
   });
 
-    return filterChampTag;
-    } 
-  
+  return filterChampTag;
+} 
 window.filteringResult = filteringResult;
 
 
-
-const orderData = (sortBy,allChampionData) =>{
- let orderResult;
+const orderData = (sortBy, allChampionData) => {
+  let orderResult;
   const allChampionNames = Object.values(allChampionData);
-  if(sortBy == "difficultyEasiestFirst"){
-    orderResult = allChampionNames.sort((a, b)=>{
-    return  a.info.difficulty-b.info.difficulty;})
-  
-  }else if(sortBy == "difficultyHardestFirst"){
-    orderResult = allChampionNames.sort((a, b)=>{
-      return  b.info.difficulty-a.info.difficulty;})
- }else if(sortBy == "nameA_Z"){
+  if (sortBy === 'difficultyEasiestFirst'){
+    orderResult = allChampionNames.sort((a, b) => {
+    return  a.info.difficulty-b.info.difficulty
+    });
+  }else if (sortBy === 'difficultyHardestFirst'){
+    orderResult = allChampionNames.sort((a, b) => {
+      return  b.info.difficulty-a.info.difficulty
+    })
+  }else if (sortBy === 'nameA_Z'){
     return  allChampionNames.sort()
-  }else if(sortBy == "nameZ_A"){
-    orderResult = allChampionNames.sort((a,b)=>{
+  }else if (sortBy === 'nameZ_A'){
+    orderResult = allChampionNames.sort((a,b) => {
       return b.name.localeCompare(a.name)
-     
-  })}
+    })
+  }
   return orderResult;
-  };
+}
 window.orderData = orderData;
+
 
 const calculateAllAttacks = (top, jungle, mid, adc, support,data) => {//CALCULAR PROMEDIO ATAQUE
   if(data[top] === undefined || data[jungle] === undefined || data[mid] === undefined || data[adc] === undefined

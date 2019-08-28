@@ -62,6 +62,7 @@ goToAverageButton.addEventListener('click', () => {
       if (championInfoDivB.hasChildNodes()) {
        championInfoDivB.removeChild(championInfoDivB.childNodes[0])
       }
+      
       championInfoDivB.appendChild(championInfoDiv.childNodes[1])
  }
 
@@ -75,96 +76,100 @@ goToAverageButton.addEventListener('click', () => {
 
 
   function showAllOnload(dataLol) {  // mostrar todos al inicio
-  championInfo;
-  let selectedTag = document.getElementById("userSelectedTag").value;
-  let allResultFilter = window.filteringResult(selectedTag,dataLol)
-    allResultFilter.forEach(e => {
-    championImgDiv.innerHTML += 
-   `
-    <div class="champion-card">
-      <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
-        <div class="card-content-img">
-          <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
-        </div>
-        <div class="card-content-p">
-          <p>${e.name}</p>
-        </div>
-      </div>  
-    </div>
-  `    
-  });
-
-selectChange.addEventListener('change', () => { //mostrar filtro
-  let selectedTag = document.getElementById("userSelectedTag").value;
-  document.getElementById("userSelectedOrder").value= 0;
-  championImgDiv.innerHTML = ""; 
-  let allResultFilter = window.filteringResult(selectedTag,dataLol);
-  allResultFilter.forEach(e => {
-    championImgDiv.innerHTML += 
-    `
-      <div class="champion-card">
-        <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
-          <div class="card-content-img">
-            <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
-          </div>
-          <div class="card-content-p">
-            <p>${e.name}</p>
-          </div>
-        </div>  
-      </div>
-    `  
-  }) 
-})
-
-orderChange.addEventListener('change', () => { //ordenar segun filtro
-  let selectedOrder = document.getElementById("userSelectedOrder").value;
-  let selectedTag = document.getElementById("userSelectedTag").value;
-  championImgDiv.innerHTML = ""; 
-  let champData = window.filteringResult(selectedTag,dataLol)
-  let allResultOrder = window.orderData(selectedOrder,champData)
-  allResultOrder.forEach(e => {
-    if (selectedOrder == "difficultyEasiestFirst" || selectedOrder == "difficultyHardestFirst"){//agrega p con dificultad
-      championImgDiv.innerHTML +=
-      `
-      <div class="champion-card">
-        <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
-          <div class="card-content-img-difficulty">
-            <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
-          </div>
-          <div class="card-content-p">
-            <p class="p-champion-name-difficulty">${e.name}</p>
-            <p class="p-champion-difficulty">Dificultad ${e.info.difficulty}</p>
-          </div>
-        </div>  
-      </div>
-      `  
-    }else{ 
+    championInfo;
+    let selectedTag = document.getElementById('userSelectedTag').value;
+    let allResultFilter = window.filteringResult(selectedTag,dataLol)
+      allResultFilter.forEach(e => {
       championImgDiv.innerHTML += 
         `
-        <div class="champion-card">
-          <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
-            <div class="card-content-img">
-              <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
-            </div>
-            <div class="card-content-p">
-              <p>${e.name}<p>
-            </div>
-          </div>  
-        </div>
-      `     
-    }  
-  }) 
-})
+          <div class="champion-card">
+            <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
+              <div class="card-content-img">
+                <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
+              </div>
+              <div class="card-content-p">
+                <p>${e.name}</p>
+              </div>
+            </div>  
+          </div>
+        `    
+      });
 
+    selectChange.addEventListener('change', () => { //mostrar filtro
+      let selectedTag = document.getElementById('userSelectedTag').value;
+      document.getElementById('userSelectedOrder').value= 0;
+      championImgDiv.innerHTML = ""; 
+      let allResultFilter = window.filteringResult(selectedTag,dataLol);
+      allResultFilter.forEach(e => {
+        championImgDiv.innerHTML += 
+        `
+          <div class="champion-card">
+            <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
+              <div class="card-content-img">
+                <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
+              </div>
+              <div class="card-content-p">
+                <p>${e.name}</p>
+              </div>
+            </div>  
+          </div>
+        `  
+      }) 
+    })
 
-clearInfo.addEventListener('click', () => { //BOTON LIMPIAR
-  
-    if(isChampionSelected){
-    championInfoDiv.removeChild(championInfoDiv.childNodes[1])
-    championInfoDivB.removeChild(championInfoDivB.childNodes[0])
-    championInfoDiv.innerHTML+=`<p class="main-info-tex"><i>Selecciona un campeón para ver su información aquí</i></p></div>`}
-    isChampionSelected = false;
- })
+    orderChange.addEventListener('change', () => { //ordenar segun filtro
+      let selectedOrder = document.getElementById('userSelectedOrder').value;
+      let selectedTag = document.getElementById('userSelectedTag').value;
+      championImgDiv.innerHTML = ""; 
+      let champData = window.filteringResult(selectedTag,dataLol)
+      let allResultOrder = window.orderData(selectedOrder,champData)
+      allResultOrder.forEach(e => {
+        if (selectedOrder === 'difficultyEasiestFirst' || selectedOrder === 'difficultyHardestFirst'){//agrega p con dificultad
+          championImgDiv.innerHTML +=
+          `
+          <div class="champion-card">
+            <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
+              <div class="card-content-img-difficulty">
+                <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
+              </div>
+              <div class="card-content-p">
+                <p class="p-champion-name-difficulty">${e.name}</p>
+                <p class="p-champion-difficulty">Dificultad ${e.info.difficulty}</p>
+              </div>
+            </div>  
+          </div>
+          `  
+        }else{ 
+          championImgDiv.innerHTML += 
+            `
+            <div class="champion-card">
+              <div class="champion-card-content" style="cursor: pointer;" id="${e.id}" onclick=championInfo(${JSON.stringify(e.image.full)},${JSON.stringify(e.id)},${e.stats.hp},${e.stats.hpperlevel},${e.stats.hpregen},${e.stats.hpregenperlevel},${e.stats.mp},${e.stats.mpperlevel},${e.stats.attackdamage},${e.stats.attackrange},${e.stats.movespeed},${e.stats.armor},${e.stats.armorperlevel},${e.stats.spellblock},${e.stats.spellblockperlevel})>
+                <div class="card-content-img">
+                  <img src="https://www.masterypoints.com/assets/img/lol/champion_icons/${e.image.full}">
+                </div>
+                <div class="card-content-p">
+                  <p>${e.name}<p>
+                </div>
+              </div>  
+            </div>
+          `     
+        }  
+      }) 
+    })
+
+    clearInfo.addEventListener('click', () => { //BOTON LIMPIAR
+        if (isChampionSelected){
+          championInfoDiv.removeChild(championInfoDiv.childNodes[1])
+          championInfoDivB.removeChild(championInfoDivB.childNodes[0])
+          championInfoDiv.innerHTML+=
+          `
+            <p class="main-info-tex">
+              <i>Selecciona un campeón para ver su información aquí</i>
+            </p>
+          `
+        }
+        isChampionSelected = false;
+    })
   }
 
 
