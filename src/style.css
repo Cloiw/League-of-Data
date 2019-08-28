@@ -262,7 +262,7 @@ div::-webkit-scrollbar-thumb {
      border:  4px outset #AE8D16; 
 }
 
-.btn-main,.btn-back,.btn-calculate{
+.btn-main,.btn-back,.btn-calculate,.btn-back-avg {
     background:  rgba(6, 42, 63, 0.8);
     font-weight: bolder;
     letter-spacing: 2px;
@@ -277,6 +277,12 @@ div::-webkit-scrollbar-thumb {
     font-size: 15px;
 }
 
+.btn-back-avg {
+    width: 25%;
+    height: 50px;
+    margin-bottom: 4%;
+}
+
 .btn-calculate{
     font-size: 15px;
     padding: 10px;
@@ -284,7 +290,7 @@ div::-webkit-scrollbar-thumb {
     font-size: 20px;
 }
 
-.btn-clear{
+.btn-clear,.btn-clear-avg {
     width: inherit;
     height: 40%;
     color: #AE8D16;
@@ -296,12 +302,17 @@ div::-webkit-scrollbar-thumb {
     background:rgba(0, 0, 0, 0.7);
 }
 
+.btn-clear-avg {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 1%;
+}
 .btn-main{
     font-size: 20px;
     width: inherit;
     height: 60%;
 }
-.btn-main:hover{
+.btn-main:hover,.btn-back-avg:hover{
     color:rgba(95, 223, 255, 1);
     text-decoration:none;
     background:rgba(0, 0, 0, 0.9);
