@@ -2,57 +2,65 @@
     font-family: 'Scada', sans-serif;
 }
 
-body{
+body {
     background-image: url("img/Freljord.jpg");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
   }
 
-.container-col{
+.container-col {
     position: absolute;
     height: 1000px;
     width: 100%;
 }
 
-.title-logo{
+.title-logo {
     width: 35%; 
     margin-bottom: 40px;
     margin-top: 15px;
-    display: flex;
     margin-left: auto;
     margin-right: auto;
 }
 
-.row-champions,.row-champions-info,.champions-container-row{
+.row-champions,
+.row-champions-info,
+.champions-container-row,
+.title-logo,
+.champion-card-content {
     display: flex;
 }
 
-.container-col,.col-champions,.col-champions-info,.col-compare-info,.info-buttons{
+.container-col,
+.col-champions,
+.col-champions-info,
+.col-compare-info,
+.info-buttons {
     flex-direction: column;
 }
 
 /* row principal */
-.row-champions{
+.row-champions {
     margin: 15px;
     height: 70%;
 }
 /* columnas principales */
-.col-champions,.col-champions-info{
+.col-champions,
+.col-champions-info {
     height: 100%;
     width: 40%;
 }
 
 /* izquierda */
-.col-champions{
+.col-champions {
     width: 59%;
     margin-right: 1%;
 }
 
-.selects-container{
+.selects-container {
     height: 8%;
 }
-.champions-container-row{
+.champions-container-row {
     border:  4px outset #AE8D16;
     background: rgba(0, 0, 0, 0.7);
     overflow-y: auto;
@@ -94,11 +102,11 @@ body{
 .champion-card-content {
     width: 100%;
     height: 100%;
-    display: flex;
     flex-direction: column;
 }
 
-.card-content-img,.card-content-p{
+.card-content-img,
+.card-content-p {
     height: 35%;
     margin-top: 5%;
     text-align: center;
@@ -111,12 +119,14 @@ body{
 }
 
 
-.card-content-img, .card-content-img-difficulty {
+.card-content-img, 
+.card-content-img-difficulty {
     height: 43%;
     margin-top: 17%;
 }
 
-.card-content-img > img, .card-content-img-difficulty > img {
+.card-content-img > img, 
+.card-content-img-difficulty > img {
     width:40px;
     height: 40px;
 }
@@ -125,8 +135,6 @@ body{
     margin-top: 8%;
     text-align: center;
 }
-
-
 
 /* derecha */
 .row-champions-info {
@@ -163,7 +171,9 @@ body{
     background: rgba(17, 76, 110, 0.9);
 }
 
-.all-info-champ-text,.image-and-name-compare-info,.main-info-tex {
+.all-info-champ-text,
+.image-and-name-compare-info,
+.main-info-tex {
     text-align: center;
     font-size: 16px;
     margin:0;
@@ -224,6 +234,12 @@ div::-webkit-scrollbar-thumb {
     padding: 6px;
 }
 
+.btn-main {
+    font-size: 20px;
+    width: inherit;
+    height: 60%;
+}
+
 /* averageee */
 .btn-calculate-avg {
     margin: 2% 0 3% 0;
@@ -235,7 +251,8 @@ div::-webkit-scrollbar-thumb {
     margin: 0;
 }
 
-#errorMsgA, #errorMsgB {
+#errorMsgA, 
+#errorMsgB {
     height: 60px;
 }
 
@@ -246,23 +263,48 @@ div::-webkit-scrollbar-thumb {
     cursor: pointer;
 }
 
-.bootstrap-select .dropdown-menu{
+.bootstrap-select .dropdown-menu {
     background:    rgba(0, 0, 0, 0.9);
     font-size: 30px;
     color: #AE8D16; 
 }
 
-.champion-card:hover, select:hover,select:focus, .bootstrap-select .btn:hover, .bootstrap-select .btn:focus,#clearInfoChamp:hover {
+.dropdown-menu>.active>a, 
+.dropdown-menu>.active>a:hover, 
+.dropdown-menu>.active>a:focus{
+    background-color :rgb(80, 80, 80) !important;
+}
+
+.bootstrap-select .no-results{
+    font-size: 13px;
+    background-color:rgba(0, 0, 0, 0.9) !important;
+}
+
+.dropdown-menu > li > a > span{
+    color: #AE8D16; 
+    
+}
+
+.champion-card:hover, 
+select:hover,
+select:focus, 
+.bootstrap-select .btn:hover, 
+.bootstrap-select .btn:focus,
+.btn-clear:hover,
+.btn-clear-avg:hover {
     color: rgb(230, 191, 51);
     background:rgba(0, 0, 0, 0.9);
 }
 
 
-.row-champios-info{
+.row-champios-info {
      border:  4px outset #AE8D16; 
 }
 
-.btn-main,.btn-back,.btn-calculate,.btn-back-avg {
+.btn-main,
+.btn-back,
+.btn-calculate,
+.btn-back-avg {
     background:  rgba(6, 42, 63, 0.8);
     font-weight: bolder;
     letter-spacing: 2px;
@@ -272,7 +314,7 @@ div::-webkit-scrollbar-thumb {
     border-image: linear-gradient(to bottom, rgba(95, 223, 255, 1) 0%, rgb(59, 157, 182) 100%) 1
 }
 
-.btn-back{
+.btn-back {
     padding: 10px;
     font-size: 15px;
 }
@@ -283,14 +325,15 @@ div::-webkit-scrollbar-thumb {
     margin-bottom: 4%;
 }
 
-.btn-calculate{
+.btn-calculate {
     font-size: 15px;
     padding: 10px;
     margin-top: 5px;
     font-size: 20px;
 }
 
-.btn-clear,.btn-clear-avg {
+.btn-clear,
+.btn-clear-avg {
     width: inherit;
     height: 40%;
     color: #AE8D16;
@@ -307,23 +350,20 @@ div::-webkit-scrollbar-thumb {
     height: 50px;
     margin-bottom: 1%;
 }
-.btn-main{
-    font-size: 20px;
-    width: inherit;
-    height: 60%;
-}
-.btn-main:hover,.btn-back-avg:hover{
+
+.btn-main:hover,
+.btn-back-avg:hover {
     color:rgba(95, 223, 255, 1);
     text-decoration:none;
     background:rgba(0, 0, 0, 0.9);
 }
 
-
-#selectsAv,#selectsAvB{
+#selectsAv,
+#selectsAvB {
     text-align: center;
 }
 
-.average{
+.average {
     width: inherit;
     height: auto;
     color: #AE8D16;
@@ -331,41 +371,39 @@ div::-webkit-scrollbar-thumb {
     border-image: linear-gradient(to bottom, rgb(163, 139, 0) 0%, rgb(82, 63, 0) 100%) 1;
     background:rgba(0, 0, 0, 0.7);
     margin-bottom: 5px;
-
 }
 
-
-.textCalculated{
+.textCalculated {
     text-align: center;
     font-size: 17px;
     color:white;
-    
 }
 
-   
-.teamA, .teamB{
+.teamA, 
+.teamB {
     border: 2px outset transparent;
     border-image: linear-gradient(to bottom, rgb(163, 139, 0) 0%, rgb(82, 63, 0) 100%) 1;
     margin-bottom: 10px;
 }
-.teamB{
+
+.teamB {
     background:rgba(17, 76, 110, 0.8);
- 
 }
-.teamA{
+
+.teamA {
     background:rgba(6, 42, 63, 0.8);
-  
 }
-.teamTitle{
+
+.team-title {
     color: white;
 }
-.piechartClass{
+
+.piechartClass {
     display: inline-block;
     margin: 0px;
     text-align: center;
-    
-    
 }
+
 /* @media screen and (max-width: 5000px){
     .infoBar{
         margin-top: 0px;
