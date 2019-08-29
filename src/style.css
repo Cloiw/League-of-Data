@@ -3,11 +3,14 @@
 }
 
 body {
+    background-image: url("img/Freljord.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-image: url("img/Freljord.jpg") no-repeat center center fixed;
-    background-size: cover;
   }
 
 .container-col {
