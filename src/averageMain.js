@@ -35,7 +35,7 @@ clearButton.addEventListener('click', () => {
 
 //CREAR OPCIONES PARA SELECT
 const createSelectOptions = (select,data) => {
-  const dataNames = Object.values(data).map(x => x.name);
+  const dataNames = Object.values(data).map(x => x.id);
   dataNames.forEach(e => {
     select.options[select.options.length] = new Option(e, e);
   });
@@ -122,7 +122,7 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
       let calculateMagic = window.calculateMagic(topTotal,jungleTotal,midTotal,adcTotal,supportTotal,dataLol);
       errorMsgA.innerHTML="";
 
-      if(!calculateAllAttacks || !calculateAttackRange || !calculateDefense || !calculateMagic ){
+      if( topTotal == 0 || jungleTotal == 0 || midTotal == 0  || supportTotal == 0 ){
         errorMsgA.innerHTML += 
         `<p class="error-msg"><i>Por favor elige un campeón para cada posicion</i></p>`
         return
@@ -172,6 +172,7 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
       let midTotal = document.getElementById('midSecondTeam').value;
       let adcTotal = document.getElementById('adcSecondTeam').value;
       let supportTotal=document.getElementById('supportSecondTeam').value;
+      console.log(topTotal,jungleTotal,midTotal,adcTotal,supportTotal)
 
       let calculateAllAttacks = window.calculateAllAttacks(topTotal, jungleTotal, midTotal, adcTotal, supportTotal, dataLol);
       let calculateAttackRange = window.calculateAttackRange(topTotal, jungleTotal, midTotal, adcTotal, supportTotal, dataLol);
@@ -180,7 +181,7 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
       
       errorMsgB.innerHTML="";
 
-      if(!calculateAllAttacks || !calculateAttackRange || !calculateDefense || !calculateMagic ){
+      if( topTotal == 0 || jungleTotal == 0 || midTotal == 0  || supportTotal == 0 ){
         errorMsgB.innerHTML += 
         `<p class="error-msg"><i>Por favor elige un campeón para cada posicion</i></p>`
         return
