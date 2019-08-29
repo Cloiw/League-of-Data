@@ -172,7 +172,6 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
       let midTotal = document.getElementById('midSecondTeam').value;
       let adcTotal = document.getElementById('adcSecondTeam').value;
       let supportTotal=document.getElementById('supportSecondTeam').value;
-      console.log(topTotal,jungleTotal,midTotal,adcTotal,supportTotal)
 
       let calculateAllAttacks = window.calculateAllAttacks(topTotal, jungleTotal, midTotal, adcTotal, supportTotal, dataLol);
       let calculateAttackRange = window.calculateAttackRange(topTotal, jungleTotal, midTotal, adcTotal, supportTotal, dataLol);
