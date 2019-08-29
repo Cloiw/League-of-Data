@@ -2,7 +2,7 @@
     font-family: 'Scada', sans-serif;
 }
 
-body {
+html {
     background-image: url("./img/Freljord.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -11,11 +11,14 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    min-height: 100%
-  }
+    height: 100%;
+}
+
+body {
+    background-color: transparent !important;
+}
 
 .container-col {
-    position: absolute;
     height: 1050px;
     width: 100%;
 }
@@ -439,7 +442,7 @@ select:focus,
     .col-champions-info {
         width:100%;
         flex-direction: row;
-        height: 103%;
+        height: 100%;
     }
     
     .image-and-name-compare-info {
@@ -488,12 +491,3 @@ select:focus,
         width: 50%;
     }
 }
-
-
-
-
-
-
-  
-
-
