@@ -11,7 +11,7 @@ body {
 
 .container-col {
     position: absolute;
-    height: 1000px;
+    height: 1050px;
     width: 100%;
 }
 
@@ -184,7 +184,7 @@ body {
 }
 
 .image-and-name-compare-info {
-    margin-top:5px;
+    margin-top:15px;
 }
 
 .main-info-tex {
@@ -387,11 +387,11 @@ select:focus,
 }
 
 .teamB {
-    background:rgba(17, 76, 110, 0.8);
+    background:rgba(17, 76, 110, 0.9);
 }
 
 .teamA {
-    background:rgba(6, 42, 63, 0.8);
+    background:rgba(6, 42, 63, 0.9)
 }
 
 .team-title {
@@ -404,41 +404,87 @@ select:focus,
     text-align: center;
 }
 
-/* @media screen and (max-width: 5000px){
-    .infoBar{
-        margin-top: 0px;
-    }}
-@media screen and (max-width: 1199px){
+@media screen and (max-width: 760px){
     
+    .row-champions {
+        display: block;
+    }
+
+    .col-champions {
+        height: 26%;
+        width:100%;
+    }
+
+    .selects-container {
+        height: 20%;
+    }
+
+    .champions-container-row {
+        height: 80%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+    }
+
+    .champion-card-group {
+        padding-top: 0;
+        flex-wrap: nowrap;
+        width: auto;
+    }
+
+    .col-champions-info {
+        width:100%;
+        flex-direction: row;
+        height: 103%;
+    }
     
-    .infoBar{
-        margin-top: 70px;
-    
-   
-}}
-
-@media screen and (max-width: 991px){
-
-.infoChampNameClass{
-    font-size:20px;
-}
-.infoBar{
-    margin-top: 65px;
-}
-}
-@media screen and (max-width: 767px){
-
-.infoBar{
-    margin-top: 10px;
-}
-
-    .selectClass, .bootstrap-select .btn{
-    font-size: 20px;
+    .image-and-name-compare-info {
+        margin-top:10px;
+    }
  }
- div::-webkit-scrollbar {
-    width: 30px;
+
+ @media screen and (max-width: 400px){
+    .select-class {
+        font-size: 10px;
+    }
+   
+    .div-text-compare-info {
+        word-wrap: break-word;
+        height:100%;
+        white-space: normal;
+        overflow: auto;
+    }
+
+    .all-info-champ-text {
+        font-size: 14px;  
+    }
+
+    .row-champions {
+        height: 63%;
+        margin:5px;
+    }
 }
-}; */
+
+ 
+ @media  screen and (max-width: 960px) and (min-width: 761px){
+     .image-and-name-compare-info {
+         margin-top:20px;
+     }
+     .select-class {
+         font-size: 17px;
+     }
+
+    .row-champions {
+        height: 78%;
+    }
+    .col-champions {
+        width: 49%;
+    }
+    .col-champions-info {
+        width: 50%;
+    }
+}
+
+
 
 
 

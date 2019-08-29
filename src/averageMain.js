@@ -214,12 +214,12 @@ fetch('http://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?fb
         </div>
       `
       drawChart('CAMPEÓN', 'ATAQUE', topTotal, jungleTotal, midTotal, adcTotal, supportTotal, dataLol[topTotal].info.attack,
-      dataLol[jungleTotal].info.attack, dataLol[midTotal].info.attack, dataLol[adcTotal].info.attack, dataLol[supportTotal].info.attack, chartDivDamageA);
+      dataLol[jungleTotal].info.attack, dataLol[midTotal].info.attack, dataLol[adcTotal].info.attack, dataLol[supportTotal].info.attack, chartDivDamageB);
 
       drawChart('CAMPEÓN', 'ATAQUE MÁGICO', topTotal, jungleTotal, midTotal, adcTotal, supportTotal,dataLol[topTotal].info.magic,
-      dataLol[jungleTotal].info.magic, dataLol[midTotal].info.magic, dataLol[adcTotal].info.magic, dataLol[supportTotal].info.magic, chartDivMagicA);
+      dataLol[jungleTotal].info.magic, dataLol[midTotal].info.magic, dataLol[adcTotal].info.magic, dataLol[supportTotal].info.magic, chartDivMagicB);
 
       drawChart('CAMPEÓN', 'DEFENSA', topTotal, jungleTotal, midTotal, adcTotal, supportTotal, dataLol[topTotal].info.defense,
-      dataLol[jungleTotal].info.defense, dataLol[midTotal].info.defense, dataLol[adcTotal].info.defense, dataLol[supportTotal].info.defense, chartDivDefenseA);
+      dataLol[jungleTotal].info.defense, dataLol[midTotal].info.defense, dataLol[adcTotal].info.defense, dataLol[supportTotal].info.defense, chartDivDefenseB);
     });
   })
