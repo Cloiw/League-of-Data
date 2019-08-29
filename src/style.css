@@ -230,6 +230,9 @@ div::-webkit-scrollbar-thumb {
     cursor: pointer;
     width: 40%;
     text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
  
 .bootstrap-select .btn {
