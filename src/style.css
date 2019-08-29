@@ -21,6 +21,7 @@ body {
 
 select {
     padding-left: 2%;
+    text-align: left !important
 }
 
 .container-col {
