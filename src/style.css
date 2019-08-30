@@ -2,15 +2,29 @@
     font-family: 'Scada', sans-serif;
 }
 
-body {
-    background-image: url("img/Freljord.jpg");
+html {
+    background-image: url("./img/Freljord.jpg");
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-  }
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: transparent !important;
+}
+
+select {
+    padding-left: 2%;
+    text-align: left !important
+}
 
 .container-col {
-    position: absolute;
     height: 1050px;
     width: 100%;
 }
@@ -205,13 +219,13 @@ div::-webkit-scrollbar {
 
 div::-webkit-scrollbar-thumb {
     background: rgba(131, 91, 6, 0.637);
-    border-radius:4px;
+    border-radius: 4px;
     border: 3px outset rgba(148, 122, 30, 0.774);
 }
 
 .select-class {
     height:100%;
-    background:  rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8);
     border: 4px  solid;
     border-bottom: none;
     border-radius: 2px;
@@ -221,6 +235,9 @@ div::-webkit-scrollbar-thumb {
     cursor: pointer;
     width: 40%;
     text-align: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
  
 .bootstrap-select .btn {
@@ -245,7 +262,7 @@ div::-webkit-scrollbar-thumb {
     margin: 2% 0 3% 0;
 }
 .error-msg {
-    color: rgb(218, 0, 0);
+    color: white;
     font-weight: bolder;
     font-size: 20px;
     margin: 0;
@@ -272,12 +289,12 @@ div::-webkit-scrollbar-thumb {
 .dropdown-menu>.active>a, 
 .dropdown-menu>.active>a:hover, 
 .dropdown-menu>.active>a:focus{
-    background-color :rgb(80, 80, 80) !important;
+    background-color: rgb(80, 80, 80) !important;
 }
 
 .bootstrap-select .no-results{
     font-size: 13px;
-    background-color:rgba(0, 0, 0, 0.9) !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
 .dropdown-menu > li > a > span{
@@ -434,7 +451,7 @@ select:focus,
     .col-champions-info {
         width:100%;
         flex-direction: row;
-        height: 103%;
+        height: 100%;
     }
     
     .image-and-name-compare-info {
@@ -483,12 +500,3 @@ select:focus,
         width: 50%;
     }
 }
-
-
-
-
-
-
-  
-
-

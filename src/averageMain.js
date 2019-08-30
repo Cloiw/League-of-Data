@@ -11,6 +11,9 @@ const chartDivDamageB= document.getElementById('piechartDamageB');
 const chartDivMagicB= document.getElementById('piechartMagicB');
 const chartDivDefenseB= document.getElementById('piechartDefenseB');
 
+let showMyTeamTotalA = document.getElementById("averageTeamA");
+let showMyTeamTotalB = document.getElementById('averageTeamB');
+
 const topSelectA = document.getElementById('topFirstTeam');
 const jungleSelectA = document.getElementById('jungleFirstTeam');
 const midSelectA = document.getElementById('midFirstTeam');
@@ -27,11 +30,30 @@ google.charts.load('current', {'packages':['corechart']});
 
 goToIndexButton.addEventListener('click', () => {
   window.location.href='index.html'
-})
+});
 
 clearButton.addEventListener('click', () => {
-  location.reload();
-})
+  chartDivDamageA.innerHTML = ""
+  chartDivDefenseA.innerHTML = ""
+  chartDivMagicA.innerHTML = ""
+  chartDivDamageB.innerHTML = ""
+  chartDivDefenseB.innerHTML = ""
+  chartDivMagicB.innerHTML = ""
+  showMyTeamTotalA.innerHTML=""
+  showMyTeamTotalA.innerHTML+= 
+  `<p class="textCalculated average"><br>
+    <i>Selecciona un campeón para cada linea</i><br><br>
+  </p>
+  `
+  showMyTeamTotalB.innerHTML="";
+  showMyTeamTotalB.innerHTML+= 
+  `<p class="textCalculated average"><br>
+    <i>Selecciona un campeón para cada linea</i><br><br>
+  </p>
+  `
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 50;
+});
 
 //CREAR OPCIONES PARA SELECT
 const createSelectOptions = (select,data) => {
@@ -109,7 +131,6 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
 
 
     calculateBtnA.addEventListener("click", () => {  //BOTON TEAM 1-A
-      let showMyTeamTotal = document.getElementById("averageTeamA");
       let topTotal = document.getElementById("topFirstTeam").value;
       let jungleTotal= document.getElementById("jungleFirstTeam").value;
       let midTotal = document.getElementById("midFirstTeam").value;
@@ -124,12 +145,12 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
 
       if( topTotal == 0 || jungleTotal == 0 || midTotal == 0  || supportTotal == 0 ){
         errorMsgA.innerHTML += 
-        `<p class="error-msg"><i>Selecciona un campeón para cada rol</i></p>`
+        `<p class="error-msg"><i>Ups! Aún faltan campeones por seleccionar</i></p>`
         return
       }
 
-      showMyTeamTotal.innerHTML="";
-      showMyTeamTotal.innerHTML+= 
+      showMyTeamTotalA.innerHTML="";
+      showMyTeamTotalA.innerHTML+= 
       ` <div class = "col-md-12 average">
           <p class = "textCalculated">
             ATAQUE<br>
@@ -166,7 +187,6 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
     });
 
     calculateBtnB.addEventListener("click", () => {//BOTON TEAM 2-B
-      let showMyTeamTotal = document.getElementById('averageTeamB');
       let topTotal = document.getElementById('topSecondTeam').value;
       let jungleTotal = document.getElementById('jungleSecondTeam').value;
       let midTotal = document.getElementById('midSecondTeam').value;
@@ -182,12 +202,12 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
 
       if( topTotal == 0 || jungleTotal == 0 || midTotal == 0  || supportTotal == 0 ){
         errorMsgB.innerHTML += 
-        `<p class="error-msg"><i>Selecciona un campeón para cada rol</i></p>`
+        `<p class="error-msg"><i>Ups! Aún faltan campeones por seleccionar</i></p>`
         return
       }
 
-      showMyTeamTotal.innerHTML="";
-      showMyTeamTotal.innerHTML+= 
+      showMyTeamTotalB.innerHTML="";
+      showMyTeamTotalB.innerHTML+= 
       ` <div class = "col-md-12 average">
           <p class = "textCalculated">
             ATAQUE<br>
@@ -223,3 +243,4 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
       dataLol[jungleTotal].info.defense, dataLol[midTotal].info.defense, dataLol[adcTotal].info.defense, dataLol[supportTotal].info.defense, chartDivDefenseB);
     });
   })
+
