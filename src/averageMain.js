@@ -145,7 +145,7 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
 
       if( topTotal == 0 || jungleTotal == 0 || midTotal == 0  || supportTotal == 0 ){
         errorMsgA.innerHTML += 
-        `<p class="error-msg"><i>Por favor elige un campeón para cada posicion</i></p>`
+        `<p class="error-msg"><i>Ups! Aún faltan campeones por seleccionar</i></p>`
         return
       }
 
@@ -202,7 +202,7 @@ fetch('https://ddragon.leagueoflegends.com/cdn/9.16.1/data/es_MX/champion.json?f
 
       if( topTotal == 0 || jungleTotal == 0 || midTotal == 0  || supportTotal == 0 ){
         errorMsgB.innerHTML += 
-        `<p class="error-msg"><i>Por favor elige un campeón para cada posicion</i></p>`
+        `<p class="error-msg"><i>Ups! Aún faltan campeones por seleccionar</i></p>`
         return
       }
 
